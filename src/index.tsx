@@ -7,6 +7,7 @@ import reportWebVitals from "./reportWebVitals";
 
 import "antd/dist/antd.css";
 import AuthContextProvider from "./context/AuthContextProvider";
+import CountContextProvider from "./pages/UseContextUseReducer/context/CountContext";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -15,7 +16,9 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <AuthContextProvider>
-        <App />
+        <CountContextProvider>
+          <App />
+        </CountContextProvider>
       </AuthContextProvider>
     </BrowserRouter>
   </React.StrictMode>
